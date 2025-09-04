@@ -12,8 +12,8 @@ from pyspark.sql import SparkSession
 import os
 from pyspark.dbutils import DBUtils
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.utils import is_databricks
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.utils import is_databricks
 
 spark = SparkSession.builder.getOrCreate()
 
@@ -105,8 +105,8 @@ for i in range(len(dataframe_records)):
 from databricks.connect import DatabricksSession
 from databricks.sdk import WorkspaceClient
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.monitoring import create_or_refresh_monitoring
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.monitoring import create_or_refresh_monitoring
 
 spark = DatabricksSession.builder.getOrCreate()
 workspace = WorkspaceClient()

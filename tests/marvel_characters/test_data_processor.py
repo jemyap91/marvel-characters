@@ -12,8 +12,8 @@ from pyspark.sql import SparkSession
 sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 
 # Import project modules after path setup
-from marvel_characters.config import ProjectConfig  # noqa: E402
-from marvel_characters.data_processor import DataProcessor, generate_synthetic_data, generate_test_data  # noqa: E402
+from project_title_classifier.config import ProjectConfig  # noqa: E402
+from project_title_classifier.data_processor import DataProcessor, generate_synthetic_data, generate_test_data  # noqa: E402
 
 
 @pytest.fixture

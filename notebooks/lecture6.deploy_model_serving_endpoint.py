@@ -14,9 +14,9 @@ from mlflow import mlflow
 from databricks.sdk import WorkspaceClient
 from dotenv import load_dotenv
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.serving.model_serving import ModelServing
-from marvel_characters.utils import is_databricks
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.serving.model_serving import ModelServing
+from project_title_classifier.utils import is_databricks
 
 
 # COMMAND ----------

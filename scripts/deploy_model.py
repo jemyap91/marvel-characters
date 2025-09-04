@@ -4,8 +4,8 @@ from loguru import logger
 from pyspark.dbutils import DBUtils
 from pyspark.sql import SparkSession
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.serving.model_serving import ModelServing
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.serving.model_serving import ModelServing
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

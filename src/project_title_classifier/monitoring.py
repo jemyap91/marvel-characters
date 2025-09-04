@@ -11,7 +11,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import ArrayType, DoubleType, IntegerType, StringType, StructField, StructType
 
-from marvel_characters.config import ProjectConfig
+from project_title_classifier.config import ProjectConfig
 
 
 def create_or_refresh_monitoring(config: ProjectConfig, spark: SparkSession, workspace: WorkspaceClient) -> None:

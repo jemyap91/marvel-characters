@@ -22,9 +22,9 @@ from dotenv import load_dotenv
 from mlflow.models import infer_signature
 from pyspark.sql import SparkSession
 
-from marvel_characters.config import ProjectConfig, Tags
-from marvel_characters.models.basic_model import BasicModel
-from marvel_characters.utils import is_databricks
+from project_title_classifier.config import ProjectConfig, Tags
+from project_title_classifier.models.basic_model import BasicModel
+from project_title_classifier.utils import is_databricks
 
 # COMMAND ----------
 

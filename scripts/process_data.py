@@ -4,8 +4,8 @@ from loguru import logger
 from pyspark.sql import SparkSession
 import pandas as pd
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.data_processor import DataProcessor
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.data_processor import DataProcessor
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

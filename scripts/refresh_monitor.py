@@ -2,8 +2,8 @@ import argparse
 from databricks.connect import DatabricksSession
 from databricks.sdk import WorkspaceClient
 
-from marvel_characters.config import ProjectConfig
-from marvel_characters.monitoring import create_or_refresh_monitoring
+from project_title_classifier.config import ProjectConfig
+from project_title_classifier.monitoring import create_or_refresh_monitoring
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

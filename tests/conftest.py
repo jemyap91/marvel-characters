@@ -11,7 +11,7 @@ from pyspark.sql import SparkSession
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 # Import project modules after path setup
-from marvel_characters.config import ProjectConfig  # noqa: E402
+from project_title_classifier.config import ProjectConfig  # noqa: E402
 
 
 @pytest.fixture(scope="session")

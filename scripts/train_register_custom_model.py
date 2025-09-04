@@ -6,9 +6,9 @@ from pyspark.dbutils import DBUtils
 from pyspark.sql import SparkSession
 from importlib.metadata import version
 
-from marvel_characters.config import ProjectConfig, Tags
-from marvel_characters.models.basic_model import BasicModel
-from marvel_characters.models.custom_model import MarvelModelWrapper
+from project_title_classifier.config import ProjectConfig, Tags
+from project_title_classifier.models.basic_model import BasicModel
+from project_title_classifier.models.custom_model import MarvelModelWrapper
 
 parser = argparse.ArgumentParser()
 parser.add_argument(

@@ -21,7 +21,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-from marvel_characters.config import ProjectConfig, Tags
+from project_title_classifier.config import ProjectConfig, Tags
 
 
 class BasicModel:

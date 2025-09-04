@@ -6,8 +6,8 @@ import mlflow
 from dotenv import load_dotenv
 from pyspark.sql import SparkSession
 
-from marvel_characters.config import ProjectConfig, Tags
-from marvel_characters.models.basic_model import BasicModel
+from project_title_classifier.config import ProjectConfig, Tags
+from project_title_classifier.models.basic_model import BasicModel
 import os
 
 

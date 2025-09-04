@@ -3,8 +3,8 @@
 import mlflow
 from pyspark.sql import SparkSession
 
-from marvel_characters.config import ProjectConfig, Tags
-from marvel_characters.models.custom_model import MarvelModelWrapper
+from project_title_classifier.config import ProjectConfig, Tags
+from project_title_classifier.models.custom_model import MarvelModelWrapper
 from importlib.metadata import version
 from dotenv import load_dotenv
 from mlflow import MlflowClient

@@ -8,7 +8,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import current_timestamp, to_utc_timestamp
 from sklearn.model_selection import train_test_split
 
-from marvel_characters.config import ProjectConfig
+from project_title_classifier.config import ProjectConfig
 
 
 class DataProcessor:
