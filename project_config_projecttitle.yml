@@ -55,4 +55,4 @@ features:
 #   - Magic
 #   - Mutant
 
-target: ProjectType
+target: project_type
