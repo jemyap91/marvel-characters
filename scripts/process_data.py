@@ -6,6 +6,7 @@ import pandas as pd
 
 from project_title_classifier.config import ProjectConfig
 from project_title_classifier.data_processor import DataProcessor
+from project_title_classifier.data_extract import extract_all
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -41,11 +42,15 @@ filepath = f"{args.root_path}/files/data"
 
 
 # Load the data
-df = pd.read_csv(filepath)
+df = extract_all(filepath)
 
 # If you have Marvel-specific synthetic/test data generation, use them here.
 # Otherwise, just use the loaded Marvel dataset as is.
 logger.info("Project Title data loaded for processing.")
+logger.info(f"Dataset shape: {df.shape}")
+logger.info(f"Columns: {list(df.columns)}")
+logger.info(f"Target column '{config.target}' distribution:")
+logger.info(df[config.target].value_counts())
 
 # Initialize DataProcessor
 data_processor = DataProcessor(df, config, spark)
