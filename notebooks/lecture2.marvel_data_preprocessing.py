@@ -16,30 +16,31 @@ from pyspark.sql import SparkSession
 
 from project_title_classifier.config import ProjectConfig
 from project_title_classifier.data_processor import DataProcessor
+from project_title_classifier.data_extract import extract_all
 
-config = ProjectConfig.from_yaml(config_path="../project_config_marvel.yml", env="dev")
+config = ProjectConfig.from_yaml(config_path="../project_config_projecttitle.yml", env="dev")
 
 logger.info("Configuration loaded:")
 logger.info(yaml.dump(config, default_flow_style=False))
 
 # COMMAND ----------
 
-# Load the Marvel characters dataset
+# Load the project title dataset
 spark = SparkSession.builder.getOrCreate()
 
-filepath = "../data/marvel_characters_dataset.csv"
+filepath = "../data"
 
 # Load the data
-df = pd.read_csv(filepath)
+df = extract_all(filepath)
 
 # Display basic info about the dataset
-logger.info(f"Dataset shape: {df.shape}")
-logger.info(f"Columns: {list(df.columns)}")
-logger.info(f"Target column '{config.target}' distribution:")
-logger.info(df[config.target].value_counts())
+# logger.info(f"Dataset shape: {df.shape}")
+# logger.info(f"Columns: {list(df.columns)}")
+# logger.info(f"Target column '{config.target}' distribution:")
+# logger.info(df[config.target].value_counts())
 
 # COMMAND ----------
-# Load the Marvel characters dataset
+# Load the Project Title dataset
 
 data_processor = DataProcessor(df, config, spark)
 

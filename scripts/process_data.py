@@ -26,7 +26,7 @@ parser.add_argument(
 
 
 args = parser.parse_args()
-config_path = f"{args.root_path}/files/project_config_marvel.yml"
+config_path = f"{args.root_path}/files/project_config_projecttitle.yml"
 
 config = ProjectConfig.from_yaml(config_path=config_path, env=args.env)
 
@@ -37,14 +37,15 @@ logger.info(yaml.dump(config, default_flow_style=False))
 spark = SparkSession.builder.getOrCreate()
 
 # Example: Adjust the path and loading logic as per your Marvel dataset location
-filepath = f"{args.root_path}/files/data/marvel_characters_dataset.csv"
+filepath = f"{args.root_path}/files/data"
+
 
 # Load the data
 df = pd.read_csv(filepath)
 
 # If you have Marvel-specific synthetic/test data generation, use them here.
 # Otherwise, just use the loaded Marvel dataset as is.
-logger.info("Marvel data loaded for processing.")
+logger.info("Project Title data loaded for processing.")
 
 # Initialize DataProcessor
 data_processor = DataProcessor(df, config, spark)

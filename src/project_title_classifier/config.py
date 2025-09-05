@@ -13,8 +13,8 @@ class ProjectConfig(BaseModel):
     Supports environment-specific configuration overrides.
     """
 
-    num_features: list[str]
-    cat_features: list[str]
+    features: list[str]
+    # cat_features: list[str]
     target: str
     catalog_name: str
     schema_name: str

@@ -1,0 +1,58 @@
+prd:
+  catalog_name: mlops_prd
+  schema_name: project_title
+acc:
+  catalog_name: mlops_acc
+  schema_name: project_title
+dev:
+  catalog_name: mlops_dev
+  schema_name: project_title
+
+
+experiment_name_basic: /Shared/project-title-basic
+experiment_name_custom: /Shared/project-title-custom
+
+parameters:
+  seed: 42
+  test_size: 0.30
+  stratify: true
+  batch_size_train: 16
+  batch_size_eval: 16
+  epochs: 3
+  learning_rate: 3.0e-5
+  weight_decay: 0.01
+  lr_scheduler_type: linear                  # linear | cosine | polynomial | constant
+  warmup_ratio: 0.06                         # ~6% warmup is a solid default
+  gradient_accumulation_steps: 1
+  fp16: true                                 # use bf16 on A100 etc.; set bf16: true instead
+  bf16: false
+  dataloader_num_workers: 4
+  eval_strategy: steps
+  eval_steps: 200
+  save_strategy: steps
+  save_steps: 200
+  save_total_limit: 2
+  load_best_model_at_end: true
+  metric_for_best_model: accuracy
+  greater_is_better: true
+  early_stopping_patience: 3
+  report_to: none                            # mlflow | wandb | tensorboard | none
+  logging_steps: 50
+  output_dir: distilbert_projects
+
+
+features:
+  - project_title
+  - client
+
+# cat_features:
+#   - Universe
+#   - Identity
+#   - Gender
+#   - Marital_Status
+#   - Teams
+#   - Origin
+#   - Magic
+#   - Mutant
+
+target: ProjectType
