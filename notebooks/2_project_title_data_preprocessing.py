@@ -1,7 +1,9 @@
 # Databricks notebook source
 
-# MAGIC %pip install -e ..
-# MAGIC %restart_python
+# MAGIC %pip install marvel_characters-0.1.0-py3-none-any.whl
+
+#  %pip install -e ..
+#  %restart_python
 
 # COMMAND ----------
 # from pathlib import Path
