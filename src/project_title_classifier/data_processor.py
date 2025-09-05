@@ -27,8 +27,8 @@ class DataProcessor:
 
         This method handles missing values, converts data types, and performs feature engineering.
         """
-        features = self.config.features
-        target = self.config.target
+        # features = self.config.features
+        # target = self.config.target
 
         self.df["project_title_and_client"] = self.df["project_title"] + " " + self.df['client']
 

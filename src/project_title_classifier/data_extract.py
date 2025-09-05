@@ -4,7 +4,7 @@ from typing import Dict, List, Optional
 import pandas as pd
 
 # ========== USER CONFIG ==========
-INPUT_DIR = "data"   # folder with your Excel files
+INPUT_DIR = "../data"   # folder with your Excel files
 VALID_EXTS = {".xlsx", ".xlsm", ".xls"}  # add .xlsb if needed (requires pyxlsb)
 TITLE_STD = "ProjectTitle"
 TYPE_STD  = "ProjectType"
